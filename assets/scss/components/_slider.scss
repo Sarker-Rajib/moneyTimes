@@ -1,0 +1,25 @@
+.editors-pick {
+    .swiper-button-next {
+        top: 10px;
+        right: 0;
+        width: 20px;
+
+        &::after {
+            color: #b31a1b;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    .swiper-button-prev {
+        top: 10px;
+        left: calc(100% - 60px);
+        width: 20px;
+
+        &::after {
+            color: #b31a1b;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}

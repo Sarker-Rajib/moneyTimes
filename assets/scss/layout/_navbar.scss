@@ -1,0 +1,67 @@
+.top-navigation {
+    border-bottom: 4px solid #b90000;
+    padding: 20px 0;
+
+    .middle-sec {
+        .navbar-brand {
+            display: inline-block;
+            max-width: 600px;
+        }
+
+        .address {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            color: #777777;
+
+            @media(max-width:767px) {
+                font-size: 10px;
+            }
+        }
+    }
+
+    .subscribe-btn {
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        color: #ffffff;
+        background: #b31a1b;
+        text-align: center;
+        border-radius: 20px;
+        padding: 5px 10px;
+
+        @media(max-width:767px) {
+            font-size: 10px;
+        }
+    }
+}
+
+.bottom-navigation {
+    padding: 15px 0;
+
+    @media(max-width:991px) {
+        overflow-x: scroll;
+    }
+
+
+    .link-wrapper {
+        @media(max-width:991px) {
+            width: 900px;
+        }
+    }
+
+    .nav-link {
+        color: #333333;
+        margin: 0 30px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+
+        &:hover {
+            color: #b90000;
+        }
+
+        @media(max-width:1199px) {
+            margin: 0 20px;
+        }
+    }
+}
