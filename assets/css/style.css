@@ -202,27 +202,6 @@ hr {
   background: rgba(21, 42, 69, 0.8);
 }
 
-.editors-pick .swiper-button-next {
-  top: 10px;
-  right: 0;
-  width: 20px;
-}
-.editors-pick .swiper-button-next::after {
-  color: #b31a1b;
-  font-size: 20px;
-  font-weight: bold;
-}
-.editors-pick .swiper-button-prev {
-  top: 10px;
-  left: calc(100% - 60px);
-  width: 20px;
-}
-.editors-pick .swiper-button-prev::after {
-  color: #b31a1b;
-  font-size: 20px;
-  font-weight: bold;
-}
-
 /*===// end of components css === */
 .pagin-wrapper {
   padding: 20px 0;
@@ -259,50 +238,54 @@ hr {
   color: #333333;
 }
 .pagin-wrapper .page-nums .page-num.active {
-  color: #b31a1b;
+  color: #099939;
 }
 .pagin-wrapper .page-nums .page-num:hover {
-  color: #b31a1b;
+  color: #099939;
 }
 
 /*=== layout css start === */
 .top-navigation {
-  border-bottom: 4px solid #b90000;
-  padding: 20px 0;
+  background: url(../images/h-bg.png) no-repeat center center/cover;
+  padding: 10px 0 20px;
 }
-.top-navigation .middle-sec .navbar-brand {
-  display: inline-block;
-  max-width: 600px;
+.top-navigation .date-link a {
+  color: #8ea8c0;
+  font-size: 12px;
+  margin: 0 5px;
+  transition: all 0.2s;
 }
-.top-navigation .middle-sec .address {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  color: #777777;
-}
-@media (max-width: 767px) {
-  .top-navigation .middle-sec .address {
-    font-size: 10px;
-  }
-}
-.top-navigation .subscribe-btn {
-  font-size: 16px;
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
+.top-navigation .date-link a:hover {
   color: #ffffff;
-  background: #b31a1b;
-  text-align: center;
-  border-radius: 20px;
-  padding: 5px 10px;
+}
+.top-navigation .navbar-brand {
+  max-width: 400px;
 }
 @media (max-width: 767px) {
-  .top-navigation .subscribe-btn {
+  .top-navigation .navbar-brand {
+    max-width: 200px;
+  }
+}
+.top-navigation button {
+  font-size: 12px;
+  color: #ffffff;
+  background: none;
+  text-align: center;
+  border: none;
+  text-transform: uppercase;
+  margin: 0 5px;
+}
+@media (max-width: 767px) {
+  .top-navigation button {
     font-size: 10px;
   }
+}
+.top-navigation button:hover {
+  color: #8ea8c0;
 }
 
 .bottom-navigation {
-  padding: 15px 0;
+  padding-top: 10px;
 }
 @media (max-width: 991px) {
   .bottom-navigation {
@@ -311,17 +294,23 @@ hr {
 }
 @media (max-width: 991px) {
   .bottom-navigation .link-wrapper {
-    width: 900px;
+    width: 800px;
   }
 }
 .bottom-navigation .nav-link {
+  text-transform: uppercase;
   color: #333333;
   margin: 0 30px;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
+  font-family: "helvetica-bold";
+  padding-bottom: 5px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+.bottom-navigation .nav-link.active {
+  color: #082585;
+  border-bottom: 2px solid rgba(84, 87, 84, 0.5960784314);
 }
 .bottom-navigation .nav-link:hover {
-  color: #b90000;
+  color: #274299;
 }
 @media (max-width: 1199px) {
   .bottom-navigation .nav-link {
@@ -330,58 +319,55 @@ hr {
 }
 
 .footer {
-  padding-top: 2px;
-  border-top: 3px solid #e2e2e2;
+  background: url(../images/foot-bg.png) no-repeat center center/cover;
+  padding: 25px 0;
 }
-.footer .footer-top {
-  padding: 30px 0;
-  border-top: 1px solid #e2e2e2;
+.footer .top {
+  display: flex;
+  align-items: flex-end;
 }
-.footer .footer-top .link-wrap {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+.footer .top img {
+  margin-inline-end: 15px;
+  max-width: 300px;
 }
 @media (max-width: 767px) {
-  .footer .footer-top .link-wrap {
-    grid-template-columns: repeat(2, 1fr);
+  .footer .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer .top img {
+    max-width: 200px;
   }
 }
-@media (max-width: 1199px) {
-  .footer .footer-top .link-wrap {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-.footer .footer-top .f-logo {
-  max-width: 300px;
-  margin-bottom: 30px;
-}
-.footer .footer-top .title-f {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  color: #b31a1b;
-  font-size: 15px;
-  padding-bottom: 20px;
-}
-.footer .footer-top a {
-  font-family: "helvetica-bold";
+.footer a {
+  font-family: "helvetica-regular";
+  text-transform: uppercase;
   display: inline-block;
   transition: all 0.2s;
   margin-bottom: 10px;
-  color: #555555;
+  font-size: 12px;
+  color: #cbcbcb;
 }
-.footer .footer-top a:hover {
-  color: #b31a1b;
+.footer a:hover {
+  color: #316ca6;
 }
-.footer .dh {
-  display: hidden;
+.footer .sign-up p {
+  font-size: 12px;
+  color: #cacaca;
 }
-.footer .foot-bottom {
-  padding: 20px 0;
-  border-top: 1px solid #e2e2e2;
+.footer .sign-up .in-form {
+  border-bottom: 2px solid #eee;
 }
-.footer .foot-bottom p {
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
+.footer .sign-up .in-form input {
+  background: none;
+  font-size: 12px;
+  color: #cacaca;
+  border: none;
+  padding: 5px 0;
+}
+.footer .sign-up span {
+  font-size: 11px;
+  color: #cacaca;
 }
 
 /*===// end of layout css === */
