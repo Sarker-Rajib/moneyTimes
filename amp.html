@@ -86,9 +86,9 @@
 <body>
   <!-- === header section start === -->
   <header>
-    <div class="top-navigation pt-2">
+    <div class="top-navigation pt-3 pt-lg-2">
       <div class="container">
-        <div class="date-link d-flex align-items-center justify-content-between">
+        <div class="d-none date-link d-lg-flex align-items-center justify-content-between">
           <p style="color: #8ea8c0; font-size: 12px;" class="text-uppercase">Sep 19, 2023 <span
               class="d-none d-md-inline-block">Last Updated
               11:56 AM EDT</span>
@@ -101,16 +101,18 @@
           </ul>
         </div>
       </div>
-      <hr class="mt-2 mb-3">
+      <hr class="mt-2 mb-3 d-none d-lg-block">
       <div class="container">
         <div class="date-link d-flex align-items-center justify-content-between">
           <a class="navbar-brand m-0" href="index.html">
             <img src="assets/images/logo.svg" alt="logo" class="img-fluid" />
           </a>
 
-          <div>
-            <button>Subscribe Now</button>
-            <button data-bs-toggle="modal" data-bs-target="#searchModel"><i class="fas fa-search"></i></button>
+          <div class="d-flex justify-content-center align-items-center">
+            <button class="d-none d-lg-block">Subscribe Now</button>
+            <button data-bs-toggle="modal" data-bs-target="#searchModel"><i class="fas fa-search f-icon"></i></button>
+            <a href="#sideNav" class="nav-link ms-2 d-lg-none" data-bs-toggle="offcanvas" role="button"><i
+                class="fas fa-bars f-icon"></i></a>
           </div>
         </div>
       </div>
@@ -118,8 +120,8 @@
     <div class="bottom-navigation shadow-sm">
       <div class="container">
         <nav class="d-flex link-wrapper align-items-center justify-content-lg-center">
-          <a href="#" class="nav-link ms-0">HOME</a>
-          <a href="#" class="nav-link active">NEWS</a>
+          <a href="#" class="nav-link ms-0 active">HOME</a>
+          <a href="#" class="nav-link">NEWS</a>
           <a href="#" class="nav-link">WORLD</a>
           <a href="#" class="nav-link">MARKETS</a>
           <a href="#" class="nav-link">TECH</a>
@@ -155,6 +157,40 @@
       </div>
     </div>
     <!-- ===//end of searchModel === -->
+
+    <!-- === sideNav start === -->
+    <div class="offcanvas offcanvas-end side-nav" tabindex="-1" id="sideNav">
+      <div class="offcanvas-header p-4">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo.svg" alt="logo" class="img-fluid" />
+        </a>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body p-4 pt-0">
+        <nav class="main-nav">
+          <p style="font-size: 12px;">SEP 19, 2023 LAST UPDATED 11:56 AM EDT</p>
+          <hr>
+          <ul class="ps-0">
+            <li>
+              <a href="#" class="nav-link">SLIDESHOWS</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">ARCHIVES</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">VIDEO</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">SUBSCRIBE NOW</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="offcanvas-footer border-top p-4">
+        <p class="copyright">Copyright © 2023 Money Times. All rights reserved.</p>
+      </div>
+    </div>
+    <!-- ===//end of sideNav ===-->
   </header>
   <!-- ===//end of header section === -->
 
@@ -310,7 +346,7 @@
 
         <!-- right side -->
         <div class="sidebar">
-          <div class="video ratio ratio-16x9 mb-3 mb-xl-4">
+          <div class="video ratio ratio-16x9 mt-3 my-lg-0 mb-3 mb-xl-4">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/i810CxN5Q6Q?si=QL-iaalOFyZXJDdH"
               title="YouTube video player" allow="accelerometer; autoplay;">
             </iframe>
@@ -324,7 +360,7 @@
           <!-- most popular -->
           <div class="most-popular pb-3 pb-xl-5">
             <p class="section-title">Most Popular</p>
-            <hr>
+            <hr class="my-xl-3">
             <!--  -->
             <div class="news-link">
               <div class="row gy-3">
@@ -343,7 +379,7 @@
                 </div>
               </div>
             </div>
-            <hr>
+            <hr class="my-xl-3">
 
             <div class="news-link">
               <div class="row gy-3">
@@ -362,7 +398,7 @@
                 </div>
               </div>
             </div>
-            <hr>
+            <hr class="my-xl-3">
 
             <div class="news-link">
               <div class="row gy-3">
@@ -382,7 +418,7 @@
               </div>
             </div>
 
-            <hr>
+            <hr class="my-xl-3">
             <div class="news-link">
               <div class="row gy-3">
                 <div class="col-4 pe-0 position-relative">
@@ -400,7 +436,7 @@
                 </div>
               </div>
             </div>
-            <hr>
+            <hr class="my-xl-3">
 
             <div class="news-link">
               <div class="row gy-3">
@@ -454,7 +490,7 @@
           <!-- Related Articles-->
           <div class="Related-Articles pb-3 pb-xl-5">
             <p class="section-title">Related Articles</p>
-            <hr>
+            <hr class="my-xl-3">
             <!--  -->
             <div class="news-link">
               <div class="row gy-3">
@@ -470,7 +506,7 @@
                 </div>
               </div>
             </div>
-            <hr>
+            <hr class="my-xl-3">
 
             <div class="news-link">
               <div class="row gy-3">
@@ -486,7 +522,7 @@
                 </div>
               </div>
             </div>
-            <hr>
+            <hr class="my-xl-3">
 
             <div class="news-link">
               <div class="row gy-3">
@@ -503,7 +539,7 @@
               </div>
             </div>
 
-            <hr>
+            <hr class="my-xl-3">
             <div class="news-link">
               <div class="row gy-3">
                 <div class="col-4 pe-0">
@@ -518,7 +554,7 @@
                 </div>
               </div>
             </div>
-            <hr>
+            <hr class="my-xl-3">
 
             <div class="news-link">
               <div class="row gy-3">
@@ -544,7 +580,7 @@
       </div>
 
       <!-- advertisement -->
-      <div class="mx-auto my-5 text-center" style="max-width: 1140px;">
+      <div class="mx-auto my-5 text-center" style="max-width: 975px;">
         <img src="assets/images/advertisement.png" alt="add-sam" class="img-fluid">
       </div>
     </div>

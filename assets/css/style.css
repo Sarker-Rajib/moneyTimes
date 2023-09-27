@@ -201,6 +201,10 @@ hr {
   }
 }
 
+.bor-right-a {
+  border-right: 1px solid #f1f1f1;
+}
+
 @media (min-width: 1200px) {
   .custom-gutter {
     --bs-gutter-x: 32px ;
@@ -238,7 +242,7 @@ hr {
 /*=== layout css start === */
 .top-navigation {
   background: url(../images/h-bg.png) no-repeat center center/cover;
-  padding: 10px 0 20px;
+  padding: 10px 0 16px;
 }
 .top-navigation .date-link a {
   color: #8ea8c0;
@@ -254,6 +258,10 @@ hr {
 .top-navigation .date-link a:hover {
   color: #ffffff;
 }
+.top-navigation .date-link .f-icon {
+  font-size: 14px;
+  color: #ffffff;
+}
 .top-navigation .navbar-brand {
   max-width: 340px;
 }
@@ -263,6 +271,7 @@ hr {
   }
 }
 .top-navigation button {
+  font-weight: bold;
   font-size: 12px;
   color: #ffffff;
   background: none;
@@ -300,13 +309,15 @@ hr {
   }
 }
 .bottom-navigation .nav-link {
-  text-transform: uppercase;
-  color: #010133;
-  margin: 0 30px;
-  font-family: "helvetica-bold";
-  padding-bottom: 5px;
-  padding-inline: 15px;
   border-bottom: 2px solid rgba(0, 0, 0, 0);
+  font-family: "helvetica-regular";
+  text-transform: uppercase;
+  padding-inline: 15px;
+  padding-bottom: 5px;
+  white-space: nowrap;
+  color: #010133;
+  font-size: 16px;
+  margin: 0 30px;
 }
 .bottom-navigation .nav-link.active {
   color: #082585;
@@ -322,8 +333,39 @@ hr {
 }
 @media (max-width: 1199px) {
   .bottom-navigation .nav-link {
+    font-size: 14px;
     margin: 0 20px;
   }
+}
+@media (max-width: 991px) {
+  .bottom-navigation .nav-link {
+    margin: 0 15px;
+  }
+}
+
+.side-nav .navbar-brand {
+  max-width: 200px;
+}
+.side-nav .main-nav .nav-link {
+  font-family: "Inter", sans-serif;
+  color: #333;
+  padding: 0.5rem 0px;
+  font-weight: 600;
+}
+@media (max-width: 1399px) {
+  .side-nav .main-nav .nav-link {
+    font-size: 14px;
+  }
+}
+.side-nav .main-nav .nav-link.active, .side-nav .main-nav .nav-link:hover {
+  color: #b90000;
+}
+.side-nav .copyright {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  color: #555;
 }
 
 .footer {
@@ -434,6 +476,14 @@ hr {
   .content-wrapper .sidebar {
     width: 305px;
   }
+}
+
+.fou-border .news-link {
+  height: 100%;
+  padding-bottom: 40px;
+}
+.fou-border .news-link.b-bottom {
+  border-bottom: 1px solid #f1f1f1;
 }
 
 @media (max-width: 767px) {

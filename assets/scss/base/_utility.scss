@@ -4,8 +4,13 @@
     }
 }
 
+.bor-right-a {
+    border-right: 1px solid #f1f1f1;
+}
+
 .custom-gutter {
     @media(min-width: 1200px) {
         --bs-gutter-x: 32px
     }
 }
+

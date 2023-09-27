@@ -15,9 +15,9 @@
 <body>
   <!-- === header section start === -->
   <header>
-    <div class="top-navigation pt-2">
+    <div class="top-navigation pt-3 pt-lg-2">
       <div class="container">
-        <div class="date-link d-flex align-items-center justify-content-between">
+        <div class="d-none date-link d-lg-flex align-items-center justify-content-between">
           <p style="color: #8ea8c0; font-size: 12px;" class="text-uppercase">Sep 19, 2023 <span
               class="d-none d-md-inline-block">Last Updated
               11:56 AM EDT</span>
@@ -30,16 +30,18 @@
           </ul>
         </div>
       </div>
-      <hr class="mt-2 mb-3">
+      <hr class="mt-2 mb-3 d-none d-lg-block">
       <div class="container">
         <div class="date-link d-flex align-items-center justify-content-between">
           <a class="navbar-brand m-0" href="index.html">
             <img src="assets/images/logo.svg" alt="logo" class="img-fluid" />
           </a>
 
-          <div>
-            <button>Subscribe Now</button>
-            <button data-bs-toggle="modal" data-bs-target="#searchModel"><i class="fas fa-search"></i></button>
+          <div class="d-flex justify-content-center align-items-center">
+            <button class="d-none d-lg-block">Subscribe Now</button>
+            <button data-bs-toggle="modal" data-bs-target="#searchModel"><i class="fas fa-search f-icon"></i></button>
+            <a href="#sideNav" class="nav-link ms-2 d-lg-none" data-bs-toggle="offcanvas" role="button"><i
+                class="fas fa-bars f-icon"></i></a>
           </div>
         </div>
       </div>
@@ -84,15 +86,49 @@
       </div>
     </div>
     <!-- ===//end of searchModel === -->
+
+    <!-- === sideNav start === -->
+    <div class="offcanvas offcanvas-end side-nav" tabindex="-1" id="sideNav">
+      <div class="offcanvas-header p-4">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/logo.svg" alt="logo" class="img-fluid" />
+        </a>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body p-4 pt-0">
+        <nav class="main-nav">
+          <p style="font-size: 12px;">SEP 19, 2023 LAST UPDATED 11:56 AM EDT</p>
+          <hr>
+          <ul class="ps-0">
+            <li>
+              <a href="#" class="nav-link">SLIDESHOWS</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">ARCHIVES</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">VIDEO</a>
+            </li>
+            <li>
+              <a href="#" class="nav-link">SUBSCRIBE NOW</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="offcanvas-footer border-top p-4">
+        <p class="copyright">Copyright © 2023 Money Times. All rights reserved.</p>
+      </div>
+    </div>
+    <!-- ===//end of sideNav ===-->
   </header>
   <!-- ===//end of header section === -->
 
   <!-- === main section start === -->
   <main class="main-contents-home py-4">
     <div class="container">
-      <div class="row gx-xl-4">
-        <div class="col-lg-9 bor-right">
-          <div class="row gx-xl-4 gy-4">
+      <div class="content-wrapper">
+        <div class="left-content">
+          <div class="row custom-gutter gy-4">
             <div class="col-xl-8 bor-right">
               <div class="top-first">
                 <a href="#">
@@ -343,6 +379,7 @@
             </div>
           </div>
           <hr class="my-4">
+
           <div class="row gy-3">
             <div class="col-6 col-md-4 col-xl-3 bor-right">
               <a href="#">
@@ -429,49 +466,48 @@
               </div>
 
               <div class="col-md-6">
-                <div class="row gy-3">
-                  <div class="col-6 pb-3 bor-right">
-                    <div class="news-link">
-                      <img src="assets/images/w1.png" alt="image" class="img-fluid">
-                      <a href="#">
-                        <h4 class="heading-medium pt-2">
-                          10 little Things that will Make a Big Difference in Your FX Trading
-                        </h4>
-                      </a>
+                <div class="fou-border">
+                  <div class="row gy-0">
+                    <div class="col-6 pb-3 bor-right-a">
+                      <div class="news-link b-bottom">
+                        <img src="assets/images/w1.png" alt="image" class="img-fluid">
+                        <a href="#">
+                          <h4 class="heading-medium pt-2">
+                            10 little Things that will Make a Big Difference in Your FX Trading
+                          </h4>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-6 pb-3">
-                    <div class="news-link">
-                      <img src="assets/images/w2.png" alt="image" class="img-fluid">
-                      <a href="#">
-                        <h4 class="heading-medium pt-2">
-                          Loan Applications Processed Around Midday More Likely To Be Rejected
-                        </h4>
-                      </a>
+                    <div class="col-6 pb-3">
+                      <div class="news-link b-bottom">
+                        <img src="assets/images/w2.png" alt="image" class="img-fluid">
+                        <a href="#">
+                          <h4 class="heading-medium pt-2">
+                            Loan Applications Processed Around Midday More Likely To Be Rejected
+                          </h4>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-6 bor-right">
-                    <hr class="mt-0 mb-3">
+                    <div class="col-6 bor-right-a">
+                      <div class="news-link">
+                        <img src="assets/images/w3.png" alt="image" class="img-fluid">
+                        <a href="#">
+                          <h4 class="heading-medium pt-2">
+                            Which Cryptocurrencies Are Worth the Money?
+                          </h4>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-6">
 
-                    <div class="news-link">
-                      <img src="assets/images/w3.png" alt="image" class="img-fluid">
-                      <a href="#">
-                        <h4 class="heading-medium pt-2">
-                          Which Cryptocurrencies Are Worth the Money?
-                        </h4>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <hr class="mt-0 mb-3">
-
-                    <div class="news-link">
-                      <img src="assets/images/w4.png" alt="image" class="img-fluid">
-                      <a href="#">
-                        <h4 class="heading-medium pt-2">
-                          Which Cryptocurrencies Are Worth the Money?
-                        </h4>
-                      </a>
+                      <div class="news-link">
+                        <img src="assets/images/w4.png" alt="image" class="img-fluid">
+                        <a href="#">
+                          <h4 class="heading-medium pt-2">
+                            Which Cryptocurrencies Are Worth the Money?
+                          </h4>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -505,8 +541,8 @@
             </div>
             <hr class="my-3">
 
-            <div class="row gy-3">
-              <div class="col-md-6 col-xl-4">
+            <div class="row custom-gutter gy-3">
+              <div class="col-md-6 col-xl-4 bor-right">
                 <div class="news-link">
                   <img src="assets/images/lom2.png " alt="image" class="img-fluid mb-2">
                   <span class="category-title pb-3">Personal Finance</span>
@@ -515,7 +551,7 @@
                   </a>
                 </div>
               </div>
-              <div class="col-md-6 col-xl-4">
+              <div class="col-md-6 col-xl-4 bor-right">
                 <div class="news-link">
                   <img src="assets/images/lom3.png " alt="image" class="img-fluid mb-2">
                   <span class="category-title pb-3">Personal Finance</span>
@@ -542,7 +578,7 @@
             <p class="section-title">Tech</p>
             <hr class="pb-2">
 
-            <div class="row gy-3">
+            <div class="row gx-lg-3 gy-3">
               <div class="col-md-6 col-xl-4">
                 <div class="news-link">
                   <img src="assets/images/tech1.png " alt="image" class="img-fluid mb-2">
@@ -595,49 +631,47 @@
               </div>
 
               <div class="col-md-6">
-                <div class="row gy-3">
-                  <div class="col-6 pb-3 h-100 bor-right">
-                    <div class="news-link">
-                      <img src="assets/images/pf2.png" alt="image" class="img-fluid">
-                      <a href="#">
-                        <h4 class="heading-medium-v2 pt-2">
-                          10 little Things that will Make a Big Difference in Your FX Trading
-                        </h4>
-                      </a>
+                <div class="fou-border">
+                  <div class="row gy-0">
+                    <div class="col-6 pb-3 h-100 bor-right-a">
+                      <div class="news-link b-bottom">
+                        <img src="assets/images/pf2.png" alt="image" class="img-fluid">
+                        <a href="#">
+                          <h4 class="heading-medium-v2 pt-2">
+                            10 little Things that will Make a Big Difference in Your FX Trading
+                          </h4>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-6 pb-3 h-100">
-                    <div class="news-link">
-                      <img src="assets/images/pf3.png" alt="image" class="img-fluid">
-                      <a href="#">
-                        <h4 class="heading-medium-v2 pt-2">
-                          Loan Applications Processed Around Midday More Likely To Be Rejected
-                        </h4>
-                      </a>
+                    <div class="col-6 pb-3 h-100">
+                      <div class="news-link b-bottom">
+                        <img src="assets/images/pf3.png" alt="image" class="img-fluid">
+                        <a href="#">
+                          <h4 class="heading-medium-v2 pt-2">
+                            Loan Applications Processed Around Midday More Likely To Be Rejected
+                          </h4>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-6 h-100 bor-right">
-                    <hr class="mt-0 mb-3">
-
-                    <div class="news-link">
-                      <img src="assets/images/pf4.png" alt="image" class="img-fluid">
-                      <a href="#">
-                        <h4 class="heading-medium-v2 pt-2">
-                          Which Cryptocurrencies Are Worth the Money?
-                        </h4>
-                      </a>
+                    <div class="col-6 h-100 bor-right-a">
+                      <div class="news-link">
+                        <img src="assets/images/pf4.png" alt="image" class="img-fluid">
+                        <a href="#">
+                          <h4 class="heading-medium-v2 pt-2">
+                            Which Cryptocurrencies Are Worth the Money?
+                          </h4>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-6 h-100">
-                    <hr class="mt-0 mb-3">
-
-                    <div class="news-link">
-                      <img src="assets/images/pf5.png" alt="image" class="img-fluid">
-                      <a href="#">
-                        <h4 class="heading-medium-v2 pt-2">
-                          Which Cryptocurrencies Are Worth the Money?
-                        </h4>
-                      </a>
+                    <div class="col-6 h-100">
+                      <div class="news-link">
+                        <img src="assets/images/pf5.png" alt="image" class="img-fluid">
+                        <a href="#">
+                          <h4 class="heading-medium-v2 pt-2">
+                            Which Cryptocurrencies Are Worth the Money?
+                          </h4>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -667,49 +701,47 @@
               </div>
 
               <div class="col-md-6">
-                <div class="row gy-3">
-                  <div class="col-6 pb-3 h-100 bor-right">
-                    <div class="news-link">
-                      <img src="assets/images/li2.png" alt="image" class="img-fluid">
-                      <a href="#">
-                        <h4 class="heading-medium-v2 pt-2">
-                          10 little Things that will Make a Big Difference in Your FX Trading
-                        </h4>
-                      </a>
+                <div class="fou-border">
+                  <div class="row gy-0">
+                    <div class="col-6 pb-3 h-100 bor-right-a">
+                      <div class="news-link b-bottom">
+                        <img src="assets/images/li2.png" alt="image" class="img-fluid">
+                        <a href="#">
+                          <h4 class="heading-medium-v2 pt-2">
+                            10 little Things that will Make a Big Difference in Your FX Trading
+                          </h4>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-6 pb-3 h-100">
-                    <div class="news-link">
-                      <img src="assets/images/li3.png" alt="image" class="img-fluid">
-                      <a href="#">
-                        <h4 class="heading-medium-v2 pt-2">
-                          Loan Applications Processed Around Midday More Likely To Be Rejected
-                        </h4>
-                      </a>
+                    <div class="col-6 pb-3 h-100">
+                      <div class="news-link b-bottom">
+                        <img src="assets/images/li3.png" alt="image" class="img-fluid">
+                        <a href="#">
+                          <h4 class="heading-medium-v2 pt-2">
+                            Loan Applications Processed Around Midday More Likely To Be Rejected
+                          </h4>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-6 h-100 bor-right">
-                    <hr class="mb-4 mt-0">
-
-                    <div class="news-link">
-                      <img src="assets/images/li4.png" alt="image" class="img-fluid">
-                      <a href="#">
-                        <h4 class="heading-medium-v2 pt-2">
-                          Which Cryptocurrencies Are Worth the Money?
-                        </h4>
-                      </a>
+                    <div class="col-6 h-100 bor-right-a">
+                      <div class="news-link">
+                        <img src="assets/images/li4.png" alt="image" class="img-fluid">
+                        <a href="#">
+                          <h4 class="heading-medium-v2 pt-2">
+                            Which Cryptocurrencies Are Worth the Money?
+                          </h4>
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                  <div class="col-6 h-100">
-                    <hr class="mb-4 mt-0">
-
-                    <div class="news-link">
-                      <img src="assets/images/li5.png" alt="image" class="img-fluid">
-                      <a href="#">
-                        <h4 class="heading-medium-v2 pt-2">
-                          Which Cryptocurrencies Are Worth the Money?
-                        </h4>
-                      </a>
+                    <div class="col-6 h-100">
+                      <div class="news-link">
+                        <img src="assets/images/li5.png" alt="image" class="img-fluid">
+                        <a href="#">
+                          <h4 class="heading-medium-v2 pt-2">
+                            Which Cryptocurrencies Are Worth the Money?
+                          </h4>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -720,7 +752,7 @@
         </div>
 
         <!-- right side -->
-        <div class="col-lg-3">
+        <div class="sidebar">
           <!-- advertisement -->
           <div class="advertisement">
             <img src="assets/images/adv1.png" alt="ad-image" class="img-fluid">
@@ -730,7 +762,7 @@
           <!-- latest news -->
           <div class="latest-news">
             <p class="section-title">Latest News</p>
-            <hr>
+            <hr class="my-xl-3">
             <!--  -->
             <div class="news-link">
               <div class="row gy-3">
@@ -746,7 +778,7 @@
                 </div>
               </div>
             </div>
-            <hr>
+            <hr class="my-xl-3">
 
             <div class="news-link">
               <div class="row gy-3">
@@ -762,7 +794,7 @@
                 </div>
               </div>
             </div>
-            <hr>
+            <hr class="my-xl-3">
 
             <div class="news-link">
               <div class="row gy-3">
@@ -779,7 +811,7 @@
               </div>
             </div>
 
-            <hr>
+            <hr class="my-xl-3">
             <div class="news-link">
               <div class="row gy-3">
                 <div class="col-4 pe-0">
@@ -794,7 +826,7 @@
                 </div>
               </div>
             </div>
-            <hr>
+            <hr class="my-xl-3">
 
             <div class="news-link">
               <div class="row gy-3">
@@ -845,7 +877,7 @@
           <!-- most popular -->
           <div class="most-popular pb-3 pb-xl-5">
             <p class="section-title">Most Popular</p>
-            <hr>
+            <hr class="my-xl-3">
             <!--  -->
             <div class="news-link">
               <div class="row gy-3">
@@ -864,7 +896,7 @@
                 </div>
               </div>
             </div>
-            <hr>
+            <hr class="my-xl-3">
 
             <div class="news-link">
               <div class="row gy-3">
@@ -883,7 +915,7 @@
                 </div>
               </div>
             </div>
-            <hr>
+            <hr class="my-xl-3">
 
             <div class="news-link">
               <div class="row gy-3">
@@ -903,7 +935,7 @@
               </div>
             </div>
 
-            <hr>
+            <hr class="my-xl-3">
             <div class="news-link">
               <div class="row gy-3">
                 <div class="col-4 pe-0 position-relative">
@@ -921,7 +953,7 @@
                 </div>
               </div>
             </div>
-            <hr>
+            <hr class="my-xl-3">
 
             <div class="news-link">
               <div class="row gy-3">
@@ -951,7 +983,7 @@
           <!-- must read -->
           <div class="must-read pb-3 pb-xl-5">
             <p class="section-title">Must Read</p>
-            <hr>
+            <hr class="my-xl-3">
             <!--  -->
             <div class="news-link">
               <div class="row gy-3">
@@ -967,7 +999,7 @@
                 </div>
               </div>
             </div>
-            <hr>
+            <hr class="my-xl-3">
 
             <div class="news-link">
               <div class="row gy-3">
@@ -983,7 +1015,7 @@
                 </div>
               </div>
             </div>
-            <hr>
+            <hr class="my-xl-3">
 
             <div class="news-link">
               <div class="row gy-3">
@@ -1000,7 +1032,7 @@
               </div>
             </div>
 
-            <hr>
+            <hr class="my-xl-3">
             <div class="news-link">
               <div class="row gy-3">
                 <div class="col-4 pe-0">
@@ -1015,7 +1047,7 @@
                 </div>
               </div>
             </div>
-            <hr>
+            <hr class="my-xl-3">
 
             <div class="news-link">
               <div class="row gy-3">
@@ -1040,7 +1072,7 @@
       </div>
 
       <!-- advertisement -->
-      <div class="mx-auto my-5 text-center" style="max-width: 1140px;">
+      <div class="mx-auto my-5 text-center" style="max-width: 975px;">
         <img src="assets/images/advertisement.png" alt="add-sam" class="img-fluid">
       </div>
     </div>
