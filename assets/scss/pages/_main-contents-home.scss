@@ -41,3 +41,20 @@
         }
     }
 }
+
+.content-wrapper {
+    @media(min-width: 992px) {
+        display: flex;
+
+        .left-content {
+            width: calc(100% - 305px);
+            padding-right: 16px;
+            margin-right: 16px;
+            border-right: 1px solid #f1f1f1;
+        }
+
+        .sidebar {
+            width: 305px;
+        }
+    }
+}
