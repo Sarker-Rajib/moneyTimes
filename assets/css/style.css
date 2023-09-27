@@ -56,7 +56,7 @@ a:hover {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1320px;
+    max-width: 1160px;
   }
 }
 /*=== abstracts css start === */
@@ -74,7 +74,7 @@ body {
 .category-title {
   font-family: "helvetica-regular";
   color: #316ca6;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .line-clamp-2 {
@@ -107,21 +107,21 @@ body {
   font-family: "PT Serif", serif;
   color: #152a45;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .heading-medium {
   font-family: "helvetica-regular";
   color: #152a45;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .heading-medium-v2 {
   font-family: "PT Serif", serif;
   color: #152a45;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .heading-semibig {
@@ -153,7 +153,7 @@ body {
 }
 
 .text-small-ash {
-  font-size: 14px;
+  font-size: 13px;
   color: #888888;
 }
 
@@ -229,47 +229,6 @@ hr {
 }
 
 /*===// end of components css === */
-.pagin-wrapper {
-  padding: 20px 0;
-  margin: auto;
-}
-@media (min-width: 1200px) {
-  .pagin-wrapper {
-    max-width: 80%;
-  }
-}
-.pagin-wrapper .nav-btn {
-  border: none;
-  background: none;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: #333333;
-}
-.pagin-wrapper .page-nums {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 30px;
-}
-@media (min-width: 1200px) {
-  .pagin-wrapper .page-nums {
-    padding: 0 50px;
-  }
-}
-.pagin-wrapper .page-nums .page-num {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
-  color: #333333;
-}
-.pagin-wrapper .page-nums .page-num.active {
-  color: #099939;
-}
-.pagin-wrapper .page-nums .page-num:hover {
-  color: #099939;
-}
-
 /*=== layout css start === */
 .top-navigation {
   background: url(../images/h-bg.png) no-repeat center center/cover;
@@ -278,14 +237,19 @@ hr {
 .top-navigation .date-link a {
   color: #8ea8c0;
   font-size: 12px;
-  margin: 0 5px;
+  margin: 0 10px;
   transition: all 0.2s;
+}
+@media (max-width: 767px) {
+  .top-navigation .date-link a {
+    margin: 0 5px;
+  }
 }
 .top-navigation .date-link a:hover {
   color: #ffffff;
 }
 .top-navigation .navbar-brand {
-  max-width: 400px;
+  max-width: 340px;
 }
 @media (max-width: 767px) {
   .top-navigation .navbar-brand {
@@ -299,11 +263,12 @@ hr {
   text-align: center;
   border: none;
   text-transform: uppercase;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 @media (max-width: 767px) {
   .top-navigation button {
     font-size: 10px;
+    margin: 0 5px;
   }
 }
 .top-navigation button:hover {
@@ -316,6 +281,11 @@ hr {
 @media (max-width: 991px) {
   .bottom-navigation {
     overflow-x: scroll;
+    /* width */
+  }
+  .bottom-navigation::-webkit-scrollbar {
+    height: 0px;
+    width: 10px;
   }
 }
 @media (max-width: 991px) {
@@ -325,10 +295,11 @@ hr {
 }
 .bottom-navigation .nav-link {
   text-transform: uppercase;
-  color: #333333;
+  color: #010133;
   margin: 0 30px;
   font-family: "helvetica-bold";
   padding-bottom: 5px;
+  padding-inline: 15px;
   border-bottom: 2px solid rgba(0, 0, 0, 0);
 }
 .bottom-navigation .nav-link.active {
@@ -337,6 +308,11 @@ hr {
 }
 .bottom-navigation .nav-link:hover {
   color: #274299;
+}
+@media (min-width: 1200px) {
+  .bottom-navigation .nav-link {
+    display: inline-block;
+  }
 }
 @media (max-width: 1199px) {
   .bottom-navigation .nav-link {
@@ -398,4 +374,49 @@ hr {
 
 /*===// end of layout css === */
 /*=== pages start === */
-/*===// end of pages  === *//*# sourceMappingURL=style.css.map */
+.pagin-wrapper {
+  padding: 20px 0;
+  margin: auto;
+}
+@media (min-width: 1200px) {
+  .pagin-wrapper {
+    max-width: 80%;
+  }
+}
+.pagin-wrapper .nav-btn {
+  border: none;
+  background: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333333;
+}
+.pagin-wrapper .page-nums {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+@media (min-width: 1200px) {
+  .pagin-wrapper .page-nums {
+    padding: 0 50px;
+  }
+}
+.pagin-wrapper .page-nums .page-num {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #333333;
+}
+.pagin-wrapper .page-nums .page-num.active {
+  color: #099939;
+}
+.pagin-wrapper .page-nums .page-num:hover {
+  color: #099939;
+}
+
+@media (max-width: 767px) {
+  .section-page .latest-news .news-item .heading-medium-v2 {
+    font-size: 16px;
+  }
+}

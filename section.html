@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MoneyTimes</title>
-  <link rel='shortcut icon' href='assets/images/fav.png' type='image/x-icon'>
+  <link rel='shortcut icon' href='assets/images/fav.svg' type='image/x-icon'>
   <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -15,30 +15,31 @@
 <body>
   <!-- === header section start === -->
   <header>
-    <div class="top-navigation">
+    <div class="top-navigation pt-2">
       <div class="container">
         <div class="date-link d-flex align-items-center justify-content-between">
-          <p style="color: #8ea8c0; font-size: 12px;">Sep 19, 2023 <span class="d-none d-md-inline-block">Last Updated
+          <p style="color: #8ea8c0; font-size: 12px;" class="text-uppercase">Sep 19, 2023 <span
+              class="d-none d-md-inline-block">Last Updated
               11:56 AM EDT</span>
           </p>
 
-          <ul class="ps-0 d-flex">
+          <ul class="ps-0 d-flex text-uppercase">
             <li><a href="#">Slideshows</a></li>
             <li><a href="#">Archives</a></li>
             <li><a href="#">Videos</a></li>
           </ul>
         </div>
       </div>
-      <hr>
+      <hr class="mt-2 mb-3">
       <div class="container">
         <div class="date-link d-flex align-items-center justify-content-between">
           <a class="navbar-brand m-0" href="index.html">
-            <img src="assets/images/logo.png" alt="logo" class="img-fluid" />
+            <img src="assets/images/logo.svg" alt="logo" class="img-fluid" />
           </a>
 
           <div>
             <button>Subscribe Now</button>
-            <button><i class="fas fa-search"></i></button>
+            <button data-bs-toggle="modal" data-bs-target="#searchModel"><i class="fas fa-search"></i></button>
           </div>
         </div>
       </div>
@@ -47,8 +48,8 @@
       <div class="container">
         <nav class="d-flex link-wrapper align-items-center justify-content-lg-center">
           <a href="#" class="nav-link ms-0">HOME</a>
-          <a href="#" class="nav-link active">NEWS</a>
-          <a href="#" class="nav-link">WORLD</a>
+          <a href="#" class="nav-link">NEWS</a>
+          <a href="#" class="nav-link active">WORLD</a>
           <a href="#" class="nav-link">MARKETS</a>
           <a href="#" class="nav-link">TECH</a>
           <a href="#" class="nav-link">PERSONAL FINANCE</a>
@@ -56,15 +57,42 @@
         </nav>
       </div>
     </div>
+
+    <!-- === searchModel start === -->
+    <div class="modal fade search-modal" id="searchModel" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header px-4">
+            <h1 class="modal-title section-title" style="color: #316ca6" id="exampleModalLabel">
+              Search Here
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <form action="#" class="d-flex">
+              <div class="input-group">
+                <input type="text" class="form-control form-control-lg rounded-0"
+                  placeholder="enter your search text" />
+                <button type="submit" class="btn btn-lg blue-btn search-btn w-auto">
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===//end of searchModel === -->
   </header>
   <!-- ===//end of header section === -->
 
   <!-- === main section start === -->
-  <section class="main-contents-home py-5">
+  <main class="main-contents-home py-4 section-page">
     <div class="container">
       <span class="heading-semibig">World</span>
       <div class="chr mb-4 mt-2"></div>
-      <div class="row gx-xl-5">
+      <div class="row gx-xl-4">
         <div class="col-lg-9 bor-right">
           <!-- business news -->
           <div class="business-news">
@@ -91,7 +119,7 @@
 
           <hr class="my-4">
           <!-- crypto -->
-          <div class="row gy-3">
+          <div class="row gy-4">
             <div class="col-md-6 col-xl-4 bor-right">
               <div class="news-link">
                 <img src="assets/images/cr1.png " alt="image" class="img-fluid mb-2">
@@ -147,13 +175,14 @@
             <hr>
 
             <div class="news-item">
-              <div class="row align-items-center">
-                <div class="col-4">
+              <div class="row gx-md-4 gx-3 align-items-md-center">
+                <div class="col-md-4 col-5">
                   <img src="assets/images/section-image/sec1.png" alt="image" class="img-fluid">
                 </div>
-                <div class="col-8">
+                <div class="col-md-8 col-7">
                   <a href="#">
-                    <h3 class="heading-medium-v2 pb-3">Which Cryptocurrencies Are Worth the Money?</h3>
+                    <h3 class="heading-medium-v2 mb-md-3 mb-2 line-clamp-2">Which Cryptocurrencies Are Worth the Money?
+                    </h3>
                   </a>
                   <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful
                     only for
@@ -162,242 +191,265 @@
                     the fast dynamics of changing quotes on trading platforms, then this is not so. Professionalism
                     grows out of these cent accounts.
                   </p>
-                  <p class="ms-0 publish-time pt-3">May 17, 2022 03:08 PM EDT</p>
+                  <p class="ms-0 publish-time pt-md-3 pt-2">May 17, 2022 03:08 PM EDT</p>
                 </div>
               </div>
             </div>
             <hr>
 
             <div class="news-item">
-              <div class="row align-items-center">
-                <div class="col-4">
+              <div class="row gx-md-4 gx-3 align-items-md-center">
+                <div class="col-md-4 col-5">
                   <img src="assets/images/section-image/sec2.png" alt="image" class="img-fluid">
                 </div>
-                <div class="col-8">
+                <div class="col-md-8 col-7">
                   <a href="#">
-                    <h3 class="heading-medium-v2 pb-3">Which Cryptocurrencies Are Worth the Money?</h3>
+                    <h3 class="heading-medium-v2 mb-md-3 mb-2 line-clamp-2">Which Cryptocurrencies Are Worth the Money?
+                    </h3>
                   </a>
-                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful only for
+                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful
+                    only for
                     beginners who may
                     not be able to cope with
                     the fast dynamics of changing quotes on trading platforms, then this is not so. Professionalism
                     grows out of these cent accounts.
                   </p>
-                  <p class="ms-0 publish-time pt-3">May 17, 2022 03:08 PM EDT</p>
+                  <p class="ms-0 publish-time pt-md-3 pt-2">May 17, 2022 03:08 PM EDT</p>
                 </div>
               </div>
             </div>
             <hr>
 
             <div class="news-item">
-              <div class="row align-items-center">
-                <div class="col-4">
+              <div class="row gx-md-4 gx-3 align-items-md-center">
+                <div class="col-md-4 col-5">
                   <img src="assets/images/section-image/sec3.png" alt="image" class="img-fluid">
                 </div>
-                <div class="col-8">
+                <div class="col-md-8 col-7">
                   <a href="#">
-                    <h3 class="heading-medium-v2 pb-3">Which Cryptocurrencies Are Worth the Money?</h3>
+                    <h3 class="heading-medium-v2 mb-md-3 mb-2 line-clamp-2">Which Cryptocurrencies Are Worth the Money?
+                    </h3>
                   </a>
-                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful only for
+                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful
+                    only for
                     beginners who may
                     not be able to cope with
                     the fast dynamics of changing quotes on trading platforms, then this is not so. Professionalism
                     grows out of these cent accounts.
                   </p>
-                  <p class="ms-0 publish-time pt-3">May 17, 2022 03:08 PM EDT</p>
+                  <p class="ms-0 publish-time pt-md-3 pt-2">May 17, 2022 03:08 PM EDT</p>
                 </div>
               </div>
             </div>
             <hr>
 
             <div class="news-item">
-              <div class="row align-items-center">
-                <div class="col-4">
+              <div class="row gx-md-4 gx-3 align-items-md-center">
+                <div class="col-md-4 col-5">
                   <img src="assets/images/section-image/sec4.png" alt="image" class="img-fluid">
                 </div>
-                <div class="col-8">
+                <div class="col-md-8 col-7">
                   <a href="#">
-                    <h3 class="heading-medium-v2 pb-3">Which Cryptocurrencies Are Worth the Money?</h3>
+                    <h3 class="heading-medium-v2 mb-md-3 mb-2 line-clamp-2">Which Cryptocurrencies Are Worth the Money?
+                    </h3>
                   </a>
-                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful only for
+                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful
+                    only for
                     beginners who may
                     not be able to cope with
                     the fast dynamics of changing quotes on trading platforms, then this is not so. Professionalism
                     grows out of these cent accounts.
                   </p>
-                  <p class="ms-0 publish-time pt-3">May 17, 2022 03:08 PM EDT</p>
+                  <p class="ms-0 publish-time pt-md-3 pt-2">May 17, 2022 03:08 PM EDT</p>
                 </div>
               </div>
             </div>
             <hr>
 
             <div class="news-item">
-              <div class="row align-items-center">
-                <div class="col-4">
+              <div class="row gx-md-4 gx-3 align-items-md-center">
+                <div class="col-md-4 col-5">
                   <img src="assets/images/section-image/sec5.png" alt="image" class="img-fluid">
                 </div>
-                <div class="col-8">
+                <div class="col-md-8 col-7">
                   <a href="#">
-                    <h3 class="heading-medium-v2 pb-3">Which Cryptocurrencies Are Worth the Money?</h3>
+                    <h3 class="heading-medium-v2 mb-md-3 mb-2 line-clamp-2">Which Cryptocurrencies Are Worth the Money?
+                    </h3>
                   </a>
-                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful only for
+                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful
+                    only for
                     beginners who may
                     not be able to cope with
                     the fast dynamics of changing quotes on trading platforms, then this is not so. Professionalism
                     grows out of these cent accounts.
                   </p>
-                  <p class="ms-0 publish-time pt-3">May 17, 2022 03:08 PM EDT</p>
+                  <p class="ms-0 publish-time pt-md-3 pt-2">May 17, 2022 03:08 PM EDT</p>
                 </div>
               </div>
             </div>
             <hr>
 
             <div class="news-item">
-              <div class="row align-items-center">
-                <div class="col-4">
+              <div class="row gx-md-4 gx-3 align-items-md-center">
+                <div class="col-md-4 col-5">
                   <img src="assets/images/section-image/sec6.png" alt="image" class="img-fluid">
                 </div>
-                <div class="col-8">
+                <div class="col-md-8 col-7">
                   <a href="#">
-                    <h3 class="heading-medium-v2 pb-3">Which Cryptocurrencies Are Worth the Money?</h3>
+                    <h3 class="heading-medium-v2 mb-md-3 mb-2 line-clamp-2">Which Cryptocurrencies Are Worth the Money?
+                    </h3>
                   </a>
-                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful only for
+                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful
+                    only for
                     beginners who may
                     not be able to cope with
                     the fast dynamics of changing quotes on trading platforms, then this is not so. Professionalism
                     grows out of these cent accounts.
                   </p>
-                  <p class="ms-0 publish-time pt-3">May 17, 2022 03:08 PM EDT</p>
+                  <p class="ms-0 publish-time pt-md-3 pt-2">May 17, 2022 03:08 PM EDT</p>
                 </div>
               </div>
             </div>
             <hr>
 
             <div class="news-item">
-              <div class="row align-items-center">
-                <div class="col-4">
+              <div class="row gx-md-4 gx-3 align-items-md-center">
+                <div class="col-md-4 col-5">
                   <img src="assets/images/section-image/sec7.png" alt="image" class="img-fluid">
                 </div>
-                <div class="col-8">
+                <div class="col-md-8 col-7">
                   <a href="#">
-                    <h3 class="heading-medium-v2 pb-3">Which Cryptocurrencies Are Worth the Money?</h3>
+                    <h3 class="heading-medium-v2 mb-md-3 mb-2 line-clamp-2">Which Cryptocurrencies Are Worth the Money?
+                    </h3>
                   </a>
-                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful only for
+                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful
+                    only for
                     beginners who may
                     not be able to cope with
                     the fast dynamics of changing quotes on trading platforms, then this is not so. Professionalism
                     grows out of these cent accounts.
                   </p>
-                  <p class="ms-0 publish-time pt-3">May 17, 2022 03:08 PM EDT</p>
+                  <p class="ms-0 publish-time pt-md-3 pt-2">May 17, 2022 03:08 PM EDT</p>
                 </div>
               </div>
             </div>
             <hr>
 
             <div class="news-item">
-              <div class="row align-items-center">
-                <div class="col-4">
+              <div class="row gx-md-4 gx-3 align-items-md-center">
+                <div class="col-md-4 col-5">
                   <img src="assets/images/section-image/sec8.png" alt="image" class="img-fluid">
                 </div>
-                <div class="col-8">
+                <div class="col-md-8 col-7">
                   <a href="#">
-                    <h3 class="heading-medium-v2 pb-3">Which Cryptocurrencies Are Worth the Money?</h3>
+                    <h3 class="heading-medium-v2 mb-md-3 mb-2 line-clamp-2">Which Cryptocurrencies Are Worth the Money?
+                    </h3>
                   </a>
-                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful only for
+                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful
+                    only for
                     beginners who may
                     not be able to cope with
                     the fast dynamics of changing quotes on trading platforms, then this is not so. Professionalism
                     grows out of these cent accounts.
                   </p>
-                  <p class="ms-0 publish-time pt-3">May 17, 2022 03:08 PM EDT</p>
+                  <p class="ms-0 publish-time pt-md-3 pt-2">May 17, 2022 03:08 PM EDT</p>
                 </div>
               </div>
             </div>
             <hr>
 
             <div class="news-item">
-              <div class="row align-items-center">
-                <div class="col-4">
+              <div class="row gx-md-4 gx-3 align-items-md-center">
+                <div class="col-md-4 col-5">
                   <img src="assets/images/section-image/sec9.png" alt="image" class="img-fluid">
                 </div>
-                <div class="col-8">
+                <div class="col-md-8 col-7">
                   <a href="#">
-                    <h3 class="heading-medium-v2 pb-3">Which Cryptocurrencies Are Worth the Money?</h3>
+                    <h3 class="heading-medium-v2 mb-md-3 mb-2 line-clamp-2">Which Cryptocurrencies Are Worth the Money?
+                    </h3>
                   </a>
-                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful only for
+                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful
+                    only for
                     beginners who may
                     not be able to cope with
                     the fast dynamics of changing quotes on trading platforms, then this is not so. Professionalism
                     grows out of these cent accounts.
                   </p>
-                  <p class="ms-0 publish-time pt-3">May 17, 2022 03:08 PM EDT</p>
+                  <p class="ms-0 publish-time pt-md-3 pt-2">May 17, 2022 03:08 PM EDT</p>
                 </div>
               </div>
             </div>
             <hr>
 
             <div class="news-item">
-              <div class="row align-items-center">
-                <div class="col-4">
+              <div class="row gx-md-4 gx-3 align-items-md-center">
+                <div class="col-md-4 col-5">
                   <img src="assets/images/section-image/sec10.png" alt="image" class="img-fluid">
                 </div>
-                <div class="col-8">
+                <div class="col-md-8 col-7">
                   <a href="#">
-                    <h3 class="heading-medium-v2 pb-3">Which Cryptocurrencies Are Worth the Money?</h3>
+                    <h3 class="heading-medium-v2 mb-md-3 mb-2 line-clamp-2">Which Cryptocurrencies Are Worth the Money?
+                    </h3>
                   </a>
-                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful only for
+                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful
+                    only for
                     beginners who may
                     not be able to cope with
                     the fast dynamics of changing quotes on trading platforms, then this is not so. Professionalism
                     grows out of these cent accounts.
                   </p>
-                  <p class="ms-0 publish-time pt-3">May 17, 2022 03:08 PM EDT</p>
+                  <p class="ms-0 publish-time pt-md-3 pt-2">May 17, 2022 03:08 PM EDT</p>
                 </div>
               </div>
             </div>
             <hr>
 
             <div class="news-item">
-              <div class="row align-items-center">
-                <div class="col-4">
+              <div class="row gx-md-4 gx-3 align-items-md-center">
+                <div class="col-md-4 col-5">
                   <img src="assets/images/section-image/sec11.png" alt="image" class="img-fluid">
                 </div>
-                <div class="col-8">
+                <div class="col-md-8 col-7">
                   <a href="#">
-                    <h3 class="heading-medium-v2 pb-3">Which Cryptocurrencies Are Worth the Money?</h3>
+                    <h3 class="heading-medium-v2 mb-md-3 mb-2 line-clamp-2">Which Cryptocurrencies Are Worth the Money?
+                    </h3>
                   </a>
-                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful only for
+                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful
+                    only for
                     beginners who may
                     not be able to cope with
                     the fast dynamics of changing quotes on trading platforms, then this is not so. Professionalism
                     grows out of these cent accounts.
                   </p>
-                  <p class="ms-0 publish-time pt-3">May 17, 2022 03:08 PM EDT</p>
+                  <p class="ms-0 publish-time pt-md-3 pt-2">May 17, 2022 03:08 PM EDT</p>
                 </div>
               </div>
             </div>
             <hr>
 
             <div class="news-item">
-              <div class="row align-items-center">
-                <div class="col-4">
+              <div class="row gx-md-4 gx-3 align-items-md-center">
+                <div class="col-md-4 col-5">
                   <img src="assets/images/section-image/sec12.png" alt="image" class="img-fluid">
                 </div>
-                <div class="col-8">
+                <div class="col-md-8 col-7">
                   <a href="#">
-                    <h3 class="heading-medium-v2 pb-3">Which Cryptocurrencies Are Worth the Money?</h3>
+                    <h3 class="heading-medium-v2 mb-md-3 mb-2 line-clamp-2">Which Cryptocurrencies Are Worth the Money?
+                    </h3>
                   </a>
-                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful only for
+                  <p class="text-small-ash line-clamp-2">If you think that the micro accounts are useful
+                    only for
                     beginners who may
                     not be able to cope with
                     the fast dynamics of changing quotes on trading platforms, then this is not so. Professionalism
                     grows out of these cent accounts.
                   </p>
-                  <p class="ms-0 publish-time pt-3">May 17, 2022 03:08 PM EDT</p>
+                  <p class="ms-0 publish-time pt-md-3 pt-2">May 17, 2022 03:08 PM EDT</p>
                 </div>
               </div>
             </div>
             <hr>
+
           </div>
           <!-- left side ended -->
         </div>
@@ -631,11 +683,11 @@
               <a href="#" class="page-num">3</a>
               <a href="#" class="page-num">4</a>
               <a href="#" class="page-num">5</a>
-              <a href="#" class="page-num">6</a>
-              <a href="#" class="page-num">7</a>
-              <a href="#" class="page-num">8</a>
-              <a href="#" class="page-num">9</a>
-              <a href="#" class="page-num">10</a>
+              <a href="#" class="page-num d-md-inline-block d-none">6</a>
+              <a href="#" class="page-num d-md-inline-block d-none">7</a>
+              <a href="#" class="page-num d-md-inline-block d-none">8</a>
+              <a href="#" class="page-num d-md-inline-block d-none">9</a>
+              <a href="#" class="page-num d-md-inline-block d-none">10</a>
             </div>
             <button class="nav-btn">
               NEXT
@@ -649,14 +701,14 @@
         <img src="assets/images/advertisement.png" alt="add-sam" class="img-fluid">
       </div>
     </div>
-  </section>
+  </main>
   <!-- ===//end of section === -->
 
   <!-- === footer section start === -->
   <footer class="footer">
     <div class="container">
       <div class="top">
-        <img src="assets/images/f-logo.png" alt="img" class="img-fluid">
+        <img src="assets/images/f-logo.svg" alt="img" class="img-fluid">
         <span style="color: #cbcbcb; font-size: 12px;">© 2023 Money Times. All rights reserved. </span>
       </div>
     </div>

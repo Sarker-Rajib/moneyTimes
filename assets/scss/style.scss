@@ -12,9 +12,7 @@
 
 /*=== components css start === */
 @use 'components/buttons';
-
 /*===// end of components css === */
-@use 'pages/main-contents-home';
 
 
 /*=== layout css start === */
@@ -24,5 +22,6 @@
 
 
 /*=== pages start === */
-
+@use 'pages/main-contents-home';
+@use 'pages/section'
 /*===// end of pages  === */

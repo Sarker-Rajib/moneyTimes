@@ -6,8 +6,12 @@
         a {
             color: #8ea8c0;
             font-size: 12px;
-            margin: 0 5px;
+            margin: 0 10px;
             transition: all 0.2s;
+
+            @media (max-width:767px) {
+                margin: 0 5px;
+            }
 
             &:hover {
                 color: #ffffff;
@@ -16,7 +20,7 @@
     }
 
     .navbar-brand {
-        max-width: 400px;
+        max-width: 340px;
 
         @media (max-width:767px) {
             max-width: 200px;
@@ -30,10 +34,11 @@
         text-align: center;
         border: none;
         text-transform: uppercase;
-        margin: 0 5px;
+        margin: 0 10px;
 
         @media(max-width:767px) {
             font-size: 10px;
+            margin: 0 5px;
         }
 
         &:hover {
@@ -47,6 +52,13 @@
 
     @media(max-width:991px) {
         overflow-x: scroll;
+
+        // scroll bar design
+        /* width */
+        &::-webkit-scrollbar {
+            height: 0px;
+            width: 10px;
+        }
     }
 
     .link-wrapper {
@@ -57,11 +69,13 @@
 
     .nav-link {
         text-transform: uppercase;
-        color: #333333;
+        color: #010133;
         margin: 0 30px;
         font-family: "helvetica-bold";
         padding-bottom: 5px;
+        padding-inline: 15px;
         border-bottom: 2px solid #00000000;
+
 
         &.active {
             color: #082585;
@@ -70,6 +84,11 @@
 
         &:hover {
             color: #274299;
+        }
+
+        @media(min-width:1200px) {
+            display: inline-block;
+
         }
 
         @media(max-width:1199px) {

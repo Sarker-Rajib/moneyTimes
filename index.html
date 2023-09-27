@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>MoneyTimes</title>
-  <link rel='shortcut icon' href='assets/images/fav.png' type='image/x-icon'>
+  <title>Money Times</title>
+  <link rel='shortcut icon' href='assets/images/fav.svg' type='image/x-icon'>
   <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -15,30 +15,31 @@
 <body>
   <!-- === header section start === -->
   <header>
-    <div class="top-navigation">
+    <div class="top-navigation pt-2">
       <div class="container">
         <div class="date-link d-flex align-items-center justify-content-between">
-          <p style="color: #8ea8c0; font-size: 12px;">Sep 19, 2023 <span class="d-none d-md-inline-block">Last Updated
+          <p style="color: #8ea8c0; font-size: 12px;" class="text-uppercase">Sep 19, 2023 <span
+              class="d-none d-md-inline-block">Last Updated
               11:56 AM EDT</span>
           </p>
 
-          <ul class="ps-0 d-flex">
+          <ul class="ps-0 d-flex text-uppercase">
             <li><a href="#">Slideshows</a></li>
             <li><a href="#">Archives</a></li>
             <li><a href="#">Videos</a></li>
           </ul>
         </div>
       </div>
-      <hr>
+      <hr class="mt-2 mb-3">
       <div class="container">
         <div class="date-link d-flex align-items-center justify-content-between">
           <a class="navbar-brand m-0" href="index.html">
-            <img src="assets/images/logo.png" alt="logo" class="img-fluid" />
+            <img src="assets/images/logo.svg" alt="logo" class="img-fluid" />
           </a>
 
           <div>
             <button>Subscribe Now</button>
-            <button><i class="fas fa-search"></i></button>
+            <button data-bs-toggle="modal" data-bs-target="#searchModel"><i class="fas fa-search"></i></button>
           </div>
         </div>
       </div>
@@ -56,25 +57,55 @@
         </nav>
       </div>
     </div>
+
+    <!-- === searchModel start === -->
+    <div class="modal fade search-modal" id="searchModel" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header px-4">
+            <h1 class="modal-title section-title" style="color: #316ca6" id="exampleModalLabel">
+              Search Here
+            </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4">
+            <form action="#" class="d-flex">
+              <div class="input-group">
+                <input type="text" class="form-control form-control-lg rounded-0"
+                  placeholder="enter your search text" />
+                <button type="submit" class="btn btn-lg blue-btn search-btn w-auto">
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===//end of searchModel === -->
   </header>
   <!-- ===//end of header section === -->
 
   <!-- === main section start === -->
-  <section class="main-contents-home py-5">
+  <main class="main-contents-home py-4">
     <div class="container">
-      <div class="row gx-xl-5">
+      <div class="row gx-xl-4">
         <div class="col-lg-9 bor-right">
-          <div class="row gx-xl-5 gy-4">
+          <div class="row gx-xl-4 gy-4">
             <div class="col-xl-8 bor-right">
               <div class="top-first">
-                <img src="assets/images/main-top/hm.png" alt="image" class="img-fluid mb-3">
-                <span class="category-title">Personal Finance </span><span class="publish-time">May 17,
-                  2022 03:08 PM EDT
-                </span>
-                <h1 class="heading-xl pb-3">Learning Opportunities of Micro Trading Accounts</h1>
-                <p class="text-small-ash">If you think that the micro accounts are useful only for beginners who may not
-                  be able to cope with the fast dynamics of changing quotes on trading platforms, then this is not so.
-                  Professionalism grows out of these cent accounts.</p>
+                <a href="#">
+                  <img src="assets/images/main-top/hm.png" alt="image" class="img-fluid mb-3">
+                  <span class="category-title">Personal Finance </span><span class="publish-time">May 17,
+                    2022 03:08 PM EDT
+                  </span>
+                  <h1 class="heading-xl pb-3">Learning Opportunities of Micro Trading Accounts</h1>
+                  <p class="text-small-ash">If you think that the micro accounts are useful only for beginners who may
+                    not
+                    be able to cope with the fast dynamics of changing quotes on trading platforms, then this is not so.
+                    Professionalism grows out of these cent accounts.</p>
+                </a>
               </div>
               <hr class="my-3">
 
@@ -1003,14 +1034,14 @@
         <img src="assets/images/advertisement.png" alt="add-sam" class="img-fluid">
       </div>
     </div>
-  </section>
+  </main>
   <!-- ===//end of  section === -->
 
   <!-- === footer section start === -->
   <footer class="footer">
     <div class="container">
       <div class="top">
-        <img src="assets/images/f-logo.png" alt="img" class="img-fluid">
+        <img src="assets/images/f-logo.svg" alt="img" class="img-fluid">
         <span style="color: #cbcbcb; font-size: 12px;">© 2023 Money Times. All rights reserved. </span>
       </div>
     </div>
