@@ -152,6 +152,13 @@ body {
   font-size: 35px;
 }
 
+.heading-22 {
+  font-family: "helvetica-bold";
+  font-size: 22px;
+  line-height: 30px;
+  color: #333333;
+}
+
 .text-small-ash {
   font-size: 13px;
   color: #888888;
@@ -292,15 +299,11 @@ hr {
 
 .bottom-navigation {
   padding-top: 10px;
+  border-bottom: 2px solid #dfe4e8;
 }
 @media (max-width: 991px) {
   .bottom-navigation {
-    overflow-x: scroll;
-    /* width */
-  }
-  .bottom-navigation::-webkit-scrollbar {
-    height: 0px;
-    width: 10px;
+    display: none;
   }
 }
 @media (max-width: 991px) {
@@ -451,16 +454,17 @@ hr {
   }
 }
 .pagin-wrapper .page-nums .page-num {
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  font-size: 16px;
+  border-bottom: 4px solid rgba(201, 209, 217, 0);
+  font-family: "helvetica-bold";
+  font-size: 13px;
+  padding: 0 5px;
   color: #333333;
 }
 .pagin-wrapper .page-nums .page-num.active {
-  color: #099939;
+  border-bottom: 4px solid #c9d1d9;
 }
 .pagin-wrapper .page-nums .page-num:hover {
-  color: #099939;
+  border-bottom: 4px solid #c9d1d9;
 }
 
 @media (min-width: 992px) {

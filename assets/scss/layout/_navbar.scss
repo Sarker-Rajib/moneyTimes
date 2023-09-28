@@ -55,16 +55,10 @@
 
 .bottom-navigation {
     padding-top: 10px;
+    border-bottom: 2px solid #dfe4e8;
 
     @media(max-width:991px) {
-        overflow-x: scroll;
-
-        // scroll bar design
-        /* width */
-        &::-webkit-scrollbar {
-            height: 0px;
-            width: 10px;
-        }
+        display: none;
     }
 
     .link-wrapper {
