@@ -483,8 +483,12 @@ hr {
 }
 
 .fou-border .news-link {
-  height: 100%;
-  padding-bottom: 40px;
+  height: 250px;
+}
+.fou-border .news-link.auto {
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 25px;
 }
 .fou-border .news-link.b-bottom {
   border-bottom: 1px solid #f1f1f1;
